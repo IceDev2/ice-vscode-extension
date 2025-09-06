@@ -1,0 +1,73 @@
+{
+  "scopeName": "source.ice",
+  "patterns": [
+    {
+      "name": "comment.line.double-slash.ice",
+      "match": "//.*$"
+    },
+    {
+      "name": "string.quoted.double.ice",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.ice",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "constant.numeric.ice",
+      "match": "\\b\\d+(?:\\.\\d+)?\\b"
+    },
+    {
+      "name": "keyword.control.ice",
+      "match": "\\b(jika|jikalau|kalau|selagi|untuk|dalam|kembalikan)\\b"
+    },
+    {
+      "name": "storage.type.ice",
+      "match": "\\b(bilangan|desimal|teks|boolean)\\b"
+    },
+    {
+      "name": "keyword.other.oop.ice",
+      "match": "\\b(kelas|baru|properti|get|set)\\b"
+    },
+    {
+      "name": "variable.language.this.ice",
+      "match": "\\b(ini|super)\\b"
+    },
+    {
+      "name": "keyword.operator.logical.ice",
+      "match": "\\b(dan|atau|bukan)\\b"
+    },
+    {
+      "name": "constant.language.ice",
+      "match": "\\b(benar|salah|kosong)\\b"
+    },
+    {
+      "name": "support.function.builtin.ice",
+      "match": "\\b(tampilkan|rentang|panjang|tipe|int|float|str)\\b"
+    },
+    {
+      "name": "keyword.operator.comparison.ice",
+      "match": "(==|!=|<=|>=|<|>)"
+    },
+    {
+      "name": "keyword.operator.arithmetic.ice",
+      "match": "(\\+|\\-|\\*|\\/|%)"
+    },
+    {
+      "name": "punctuation.terminator.statement.ice",
+      "match": ";"
+    },
+    {
+      "name": "punctuation.separator.colon.ice",
+      "match": ":"
+    }
+  ],
+  "repository": {},
+  "fileTypes": [
+    "ice"
+  ],
+  "name": "ICE"
+}

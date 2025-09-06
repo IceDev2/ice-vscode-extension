@@ -1,0 +1,72 @@
+{
+  "kelas": {
+    "prefix": "kelas",
+    "body": [
+      "kelas ${1:NamaKelas}${2: : ${3:Induk}} {",
+      "    tugas __init__(${4:args}) {",
+      "        ${5:// inisialisasi}",
+      "    }",
+      "",
+      "    tugas ${6:metode}(${7:params}) {",
+      "        ${8:kembalikan kosong;}",
+      "    }",
+      "}"
+    ],
+    "description": "Template deklarasi kelas (opsional pewarisan)"
+  },
+  "tugas": {
+    "prefix": "tugas",
+    "body": [
+      "tugas ${1:nama}(${2:params}) {",
+      "    ${3:// kode}",
+      "    ${4:kembalikan kosong;}$0",
+      "}"
+    ],
+    "description": "Deklarasi fungsi/method"
+  },
+  "jika": {
+    "prefix": "jika",
+    "body": [
+      "jika (${1:kondisi}) {",
+      "    ${2:// ...}",
+      "}${3: jikalau (${4:kondisi2}) {",
+      "    ${5:// ...}",
+      "} ${6:kalau {",
+      "    ${7:// ...}",
+      "}}"
+    ],
+    "description": "Blok jika / jikalau / kalau"
+  },
+  "selagi": {
+    "prefix": "selagi",
+    "body": [
+      "selagi (${1:kondisi}) {",
+      "    ${2:// ...}",
+      "}"
+    ],
+    "description": "Perulangan while"
+  },
+  "untuk": {
+    "prefix": "untuk",
+    "body": [
+      "untuk ${1:i} dalam rentang(${2:mulai}, ${3:akhir}${4:, ${5:langkah}}) {",
+      "    ${6:// ...}",
+      "}"
+    ],
+    "description": "Perulangan untuk ... dalam rentang(...)"
+  },
+  "properti": {
+    "prefix": "properti",
+    "body": [
+      "properti ${1:nama} {",
+      "    get {",
+      "        kembalikan ${2:nilai};",
+      "    }",
+      "    set(${3:v}) {",
+      "        ${4:${1:nama} = ${3:v};}",
+      "    }",
+      "}"
+    ],
+    "description": "Properti dengan get/set"
+  }
+}

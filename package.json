@@ -1,0 +1,57 @@
+{
+  "name": "ice-language-support",
+  "displayName": "ICE Language Support",
+  "description": "Syntax highlighting, snippets, and autocomplete for the ICE programming language (Bahasa Indonesia).",
+  "publisher": "ice-dev",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:ice"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "ice",
+        "aliases": [
+          "ICE",
+          "ice"
+        ],
+        "extensions": [
+          ".ice"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ice",
+        "scopeName": "source.ice",
+        "path": "./syntaxes/ice.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "ice",
+        "path": "./snippets/ice.code-snippets"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "lint": "echo \"No lint configured\""
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.3",
+    "vsce": "^2.15.0"
+  }
+}
